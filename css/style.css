@@ -68,12 +68,10 @@ select {
 .output-content {
     font-family: monospace;
     position: relative;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Center vertically */
-    height: 100%;
+    display: block; /* Change to block to allow wrapping */
     text-align: center;
     overflow-wrap: break-word; /* Break long words to the next line */
     word-wrap: break-word;     /* Legacy support for older browsers */
     white-space: normal;       /* Allow normal white-space handling */
 }
+
