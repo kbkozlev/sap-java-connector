@@ -69,7 +69,7 @@ select {
     font-family: monospace;
     position: relative;
     display: block;
-    text-align: center;
+    text-align: left;
     overflow-wrap: break-word;
     word-wrap: break-word;
     white-space: normal;
