@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAP JAVA Connection Configuration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/img/sap.ico" sizes="any">
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<div class="form-container">
+    <h2>SAP JAVA Connection Configuration</h2>
+    <form id="sap-input-form">
+        <label for="server">Application Server</label>
+        <input type="text" id="server" name="server" required>
+
+        <label for="inum">Instance Number</label>
+        <input type="text" id="inum" name="inum" required>
+
+        <label for="sid">System ID</label>
+        <input type="text" id="sid" name="sid" required>
+
+        <!-- Dropdown Menu with new styling -->
+        <label for="mode"></label><select id="mode" name="mode">
+            <option value="simple">Simple</option>
+            <option value="advanced">Advanced</option>
+        </select>
+
+        <!-- Additional fields for Advanced Mode (Initially Hidden) -->
+        <div id="advancedFields" class="hidden">
+            <label for="client">Client</label>
+            <input type="text" id="client" name="client">
+
+            <label for="language">Language</label>
+            <input type="text" id="language" name="language">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Output Field (visible at all times) -->
+    <div id="output" class="output-container">
+        <div id="outputContent" class="output-content">Java connection string</div>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="js/app.js"></script>
+</body>
+
+</html>

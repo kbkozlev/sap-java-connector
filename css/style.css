@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.form-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+input,
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Custom styling for the dropdown */
+select {
+    width: auto; /* Set to auto to make it smaller */
+    padding: 5px; /* Smaller padding */
+    margin: 10px 0; /* Same margin for vertical spacing */
+    border: 1px solid #007bff; /* Border color for distinction */
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.output-container {
+    margin-top: 30px; /* Adjust this value to increase or decrease the space */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.output-content {
+    font-family: monospace;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100%;
+    text-align: center;
+    overflow-wrap: break-word; /* Break long words to the next line */
+    word-wrap: break-word;     /* Legacy support for older browsers */
+    white-space: normal;       /* Allow normal white-space handling */
+}
