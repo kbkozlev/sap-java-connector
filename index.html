@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SAP JAVA Connection Configuration</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="/img/sap.ico" sizes="any">
     <meta name="theme-color" content="#fafafa">
+    <title>SAP JAVA Connection Configuration</title>
 </head>
 
 <body>
@@ -15,27 +15,49 @@
     <h2>SAP JAVA Connection Configuration</h2>
     <form id="sap-input-form">
         <label for="server">Application Server</label>
-        <input type="text" id="server" name="server" required>
+        <input type="text" id="server" name="server"
+               placeholder="e.g. 192.168.1.0"
+               required>
 
         <label for="inum">Instance Number</label>
-        <input type="text" id="inum" name="inum" required>
+        <input type="text" id="inum" name="inum"
+               placeholder="00 - 99"
+               required
+               title="Please enter a 2-digit number"
+               maxlength="2">
 
         <label for="sid">System ID</label>
-        <input type="text" id="sid" name="sid" required>
+        <input type="text" id="sid" name="sid"
+               placeholder="e.g. S4H"
+               required>
 
         <!-- Dropdown Menu with new styling -->
-        <label for="mode"></label><select id="mode" name="mode">
-        <option value="simple">Simple</option>
-        <option value="advanced">Advanced</option>
-    </select>
+        <label for="mode">Mode</label>
+        <select id="mode" name="mode">
+            <option value="simple">Simple</option>
+            <option value="advanced">Advanced</option>
+        </select>
 
         <!-- Additional fields for Advanced Mode (Initially Hidden) -->
         <div id="advancedFields" class="hidden">
             <label for="client">Client</label>
-            <input type="text" id="client" name="client">
+            <input type="text" id="client" name="client"
+                   placeholder="001 - 999"
+                   pattern="^\d{3}$"
+                   maxlength="3">
 
             <label for="language">Language</label>
-            <input type="text" id="language" name="language">
+            <input type="text" id="language" name="language"
+                   placeholder="EN"
+                   pattern="^[a-Z]{2}$"
+                   autocapitalize="characters"
+                   maxlength="2">
+
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
         </div>
 
         <button type="submit">Submit</button>

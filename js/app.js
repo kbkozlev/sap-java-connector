@@ -27,13 +27,23 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
     if (mode === 'advanced') {
         const client = document.getElementById('client').value;
         const language = document.getElementById('language').value;
+        const uname = document.getElementById('uname').value;
+        const password = document.getElementById('password').value;
 
         if (client) {
-            localString += `/M/${client}`;
+            localString += `&clnt=${client}`;
         }
 
         if (language) {
             localString += `/L/${language}`;
+        }
+
+        if (uname) {
+            localString += `/U/${uname}`;
+        }
+
+        if (password) {
+            localString += `/P/${password}`;
         }
     }
 
