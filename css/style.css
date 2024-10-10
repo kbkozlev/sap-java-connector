@@ -43,10 +43,10 @@ button:hover {
 
 /* Custom styling for the dropdown */
 select {
-    width: auto; /* Set to auto to make it smaller */
-    padding: 5px; /* Smaller padding */
-    margin: 10px 0; /* Same margin for vertical spacing */
-    border: 1px solid #007bff; /* Border color for distinction */
+    width: auto;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #007bff;
     background-color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -57,7 +57,7 @@ select {
 }
 
 .output-container {
-    margin-top: 30px; /* Adjust this value to increase or decrease the space */
+    margin-top: 30px;
     padding: 10px;
     background-color: #f1f1f1;
     border: 1px solid #ccc;
@@ -68,10 +68,10 @@ select {
 .output-content {
     font-family: monospace;
     position: relative;
-    display: block; /* Change to block to allow wrapping */
+    display: block;
     text-align: center;
-    overflow-wrap: break-word; /* Break long words to the next line */
-    word-wrap: break-word;     /* Legacy support for older browsers */
-    white-space: normal;       /* Allow normal white-space handling */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
 }
 

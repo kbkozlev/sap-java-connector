@@ -20,7 +20,7 @@
                required>
 
         <label for="inum">Instance Number</label>
-        <input type="number" id="inum" name="inum"
+        <input type="text" id="inum" name="inum"
                placeholder="00 - 99"
                required
                title="Please enter a 2-digit number"
@@ -41,10 +41,12 @@
         <!-- Additional fields for Advanced Mode (Initially Hidden) -->
         <div id="advancedFields" class="hidden">
             <label for="client">Client</label>
-            <input type="number" id="client" name="client"
+            <input type="text" id="client" name="client"
                    placeholder="001 - 999"
                    pattern="^\d{3}$"
-                   maxlength="3">
+                   maxlength="3"
+                   title="Please enter a 3-digit number"
+                   required>
 
             <label for="language">Language</label>
             <input type="text" id="language" name="language"

@@ -65,3 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+document.getElementById('client').addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3); // Allow only digits and limit to 3
+});
+
+document.getElementById('inum').addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2); // Allow only digits and limit to 2
+});
+
