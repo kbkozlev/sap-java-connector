@@ -24,10 +24,6 @@
                placeholder="00 - 99"
                required>
 
-        <label for="sid">System ID</label>
-        <input type="text" id="sid" name="sid"
-               placeholder="e.g. S4H">
-
         <!-- Dropdown Menu with new styling -->
         <label for="mode">Mode</label>
         <div>
@@ -39,22 +35,25 @@
 
         <!-- Additional fields for Advanced Mode (Initially Hidden) -->
         <div id="advancedFields" class="hidden">
+            
             <label for="client">Client</label>
             <input type="text" id="client" name="client"
                    placeholder="001 - 999">
+
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" 
+                   placeholder="Enter username">
 
             <label for="language">Language</label>
             <input type="text" id="language" name="language"
                    placeholder="EN"
                    pattern="^[a-Z]{2}$"
-                   autocapitalize="characters"
                    maxlength="2">
 
-            <label for="uname">Username</label>
-            <input type="text" id="uname" name="uname" placeholder="Enter username">
+            <label for="transaction">Transaction</label>
+            <input type="text" id="transaction" name="transaction"
+                   placeholder="MIGO">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter password">
         </div>
 
         <button type="submit">Submit</button>
