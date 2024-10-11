@@ -23,7 +23,7 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
         const client = document.getElementById('client').value;
         const uname = document.getElementById('uname').value;
         const language = document.getElementById('language').value;
-        const transaction = document.getElementById('transaction').value;
+        let transaction = document.getElementById('transaction').value;
 
         if (client) {
             localString += `&clnt=${client}`;
