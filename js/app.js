@@ -35,11 +35,11 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
         }
 
         if (language) {
-            localString += `/L/${language}`;
+            localString += `&lang=${language}`;
         }
 
         if (uname) {
-            localString += `/U/${uname}`;
+            localString += `&user=${uname}`;
         }
 
         if (password) {
