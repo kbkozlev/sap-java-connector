@@ -5,7 +5,6 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
     // Get values from input fields
     const server = document.getElementById('server').value;
     const inum = document.getElementById('inum').value;
-    const sid = document.getElementById('sid').value;
 
     // Get the mode selected (simple or advanced)
     const mode = document.getElementById('mode').value;
@@ -20,30 +19,29 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
         localString += `/S/32${inum}`;
     }
 
-    if (sid) {
-        localString += `/R/${sid}`;
-    }
-
     if (mode === 'advanced') {
         const client = document.getElementById('client').value;
-        const language = document.getElementById('language').value;
         const uname = document.getElementById('uname').value;
-        const password = document.getElementById('password').value;
+        const language = document.getElementById('language').value;
+        const transaction = document.getElementById('transaction').value;
 
         if (client) {
             localString += `&clnt=${client}`;
-        }
-
-        if (language) {
-            localString += `&lang=${language}`;
         }
 
         if (uname) {
             localString += `&user=${uname}`;
         }
 
-        if (password) {
-            localString += `/P/${password}`;
+        if (language) {
+            localString += `&lang=${language}`;
+        }
+
+        if (transaction) {
+            if (transaction.startsWith("/n")) {
+                transaction = transaction.slice(2);
+            }
+            localString += `&tran=${transaction}`;
         }
     }
 
