@@ -3,11 +3,11 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
     event.preventDefault(); // Prevent the form from submitting normally
 
     // Get values from input fields
-    const server = document.getElementById('server').value;
-    const inum = document.getElementById('inum').value;
+    const server = document.getElementById('server').value.trim();
+    const inum = document.getElementById('inum').value.trim();
 
     // Get the mode selected (simple or advanced)
-    const mode = document.getElementById('mode').value;
+    const mode = document.getElementById('mode').value.trim();
 
     let localString = '';
 
@@ -20,10 +20,10 @@ document.getElementById('sap-input-form').addEventListener('submit', function(ev
     }
 
     if (mode === 'advanced') {
-        const client = document.getElementById('client').value;
-        const uname = document.getElementById('uname').value;
-        const language = document.getElementById('language').value;
-        let transaction = document.getElementById('transaction').value;
+        const client = document.getElementById('client').value.trim();
+        const uname = document.getElementById('uname').value.trim();
+        const language = document.getElementById('language').value.trim();
+        let transaction = document.getElementById('transaction').value.trim();
 
         if (client) {
             localString += `&clnt=${client}`;

@@ -11,13 +11,17 @@
 </head>
 
 <body>
+
 <div class="form-container">
     <h2>SAP JAVA Connection Configuration</h2>
+
     <form id="sap-input-form">
+
         <label for="server">Application Server</label>
         <input type="text" id="server" name="server"
-               placeholder="e.g. 192.168.1.0"
-               required>
+               placeholder="e.g. 192.168.1.0 or hostname"
+               required
+               pattern=".*\S.*"/>
 
         <label for="inum">Instance Number</label>
         <input type="text" id="inum" name="inum"
